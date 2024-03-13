@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="libs/angular.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <div ng-controller="infoController">
+      <h1>{{wellcome}}</h1>
+      <h1>Họ tên: {{hoTen}}</h1>
+      <h1>Tuổi: {{tuoi}}</h1>
+      <h1>Quê quán: {{queQuan}}</h1>
+      <h1>Ngành: {{nganh}}</h1>
+      <h1>Lớp: {{lop}}</h1>
+    </div>
+  </body>
+  <script>
+    function myFunc($scope) {
+      //luôn luôn có tham số $scope
+      $scope.wellcome = "Hello World";
+      //đằng sau $scope là biến mình khởi tạo để render ra view
+      $scope.hoTen = "Nguyễn Duy Hoàng";
+      $scope.tuoi = 20;
+      $scope.queQuan = "Quảng Ninh";
+      $scope.nganh = "Lập trình Web";
+      $scope.lop = "WD18318";
+    }
+    //khai báo angular js cùng với vùng mình sử dụng
+    var app = angular.module("myApp", []);
+    //map hàm myFunc với vùng infoController để render dữ liệu ra
+    app.controller("infoController", myFunc);
+  </script>
+</html>

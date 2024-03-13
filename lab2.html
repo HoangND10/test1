@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký trường cao đẳng FPT Polytechnic</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .limited-height-img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        object-position: top;
+      }
+      .form-check-input {
+        vertical-align: middle;
+        margin-left: 0.1px;
+      }
+
+      .form-check-label {
+        padding-left: 18px;
+      }
+      .dim-text {
+        color: #777;
+      }
+      .btn-primary {
+        border: 1px solid;
+        border-radius: 0;
+        background: #111;
+        color: #fff;
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1;
+        padding: 1.5rem 2rem;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .banner {
+        width: 100%;
+      }
+      h1 {
+        margin: 40px 40px;
+        color: #2e3192;
+      }
+      h3 {
+        color: #2e3192;
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .container {
+        border: 5px;
+        border-radius: 5px;
+      }
+      body {
+        background-image: url("https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/bg-register.jpg");
+      }
+      form {
+        border: 0.1px solid #ccc;
+        border-radius: 5px;
+        padding: 40px 50px;
+        background-color: #fff;
+        font-size: 14px;
+      }
+      .title-section:before {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #f26522;
+        margin-right: 10px;
+        border-radius: 2px;
+      }
+      .error-message {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-banner">
+      <img
+        class="banner"
+        src="https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/Banner.png"
+        alt=""
+      />
+    </div>
+    <div class="container">
+      <h1 class="text-center">PHIẾU ĐĂNG KÝ HỌC</h1>
+      <form id="myForm">
+        <h3 class="title-section">THÔNG TIN THÍ SINH</h3>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="hoTen">Họ và tên</label>
+              <input
+                type="text"
+                class="form-control"
+                id="hoTen"
+                placeholder="Họ và tên"
+              />
+              <label class="error-message" id="hoTenError"
+                >Bạn hãy nhập họ tên</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="ngaySinh">Ngày sinh</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ngaySinh"
+                placeholder="DD/MM/YYYY"
+              />
+              <label class="error-message" id="nsError"
+                >Bạn hãy nhập ngày sinh</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="gioiTinh">Giới tính</label>
+              <select class="form-control" id="gioiTinh">
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="danToc">Dân tộc</label>
+              <input
+                type="text"
+                class="form-control"
+                id="danToc"
+                placeholder="Kinh"
+              />
+              <label class="error-message" id="dtError"
+                >Bạn hãy nhập dân tộc</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="soCCCD">Số CCCD/Chứng minh nhân dân</label>
+              <input
+                type="text"
+                class="form-control"
+                id="soCCCD"
+                placeholder="0123456789"
+              />
+              <label class="error-message" id="cccdError"
+                >Hãy nhập số CMND/CCCD</label
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="ngayCap">Ngày cấp</label>
+              <input
+                type="text"
+                class="form-control"
+                id="ngayCap"
+                placeholder="DD/MM/YYYY"
+              />
+              <label class="error-message" id="ngaycError"
+                >Hãy nhập ngày cấp CMND/CCCD</label
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="noiCap">Nơi cấp</label>
+              <input
+                type="text"
+                class="form-control"
+                id="noiCap"
+                placeholder="Hà Nội, Hồ Chí Minh,..."
+              />
+              <label class="error-message" id="noicError"
+                >Hãy nhập nơi cấp CMND/CCCD</label
+              >
+            </div>
+          </div>
+        </div>
+        <label for=""
+          >Nơi thường trú (Điền thông tin đầy đủ như trong CMND/CCCD)</label
+        >
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control" id="tinhThanhPho">
+                <option value="">Chọn tỉnh/thành phố</option>
+              </select>
+              <label class="error-message" id="tinhThanhPho1"
+                >Hãy chọn tỉnh/thành phố</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control" id="quanHuyen">
+                <option value="">Quận/Huyện</option>
+              </select>
+              <label class="error-message" id="quanHuyen1"
+                >Hãy chọn quận/huyện
+              </label>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <select class="form-control" id="xaPhuong">
+                <option value="">Xã/Phường/Thị Trấn</option>
+              </select>
+              <label class="error-message" id="xaPhuong1"
+                >Hãy chọn xã/phường/thị trấn</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="soNhaDuong"
+                placeholder="Số nhà, đường, ngõ, xóm"
+              />
+              <label class="error-message" id="snError">Hãy nhập địa chỉ</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="soDienThoai">Số điện thoại thí sinh</label>
+              <input
+                type="text"
+                class="form-control"
+                id="soDienThoai"
+                placeholder="Nhập số điện thoại"
+              />
+              <label class="error-message" id="sdtError"
+                >Hãy nhập số điện thoại thí sinh</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="email">Email thí sinh</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Nhập email"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="hoTenPhuHuynh">Họ tên phụ huynh/người bảo trợ</label>
+              <input
+                type="text"
+                class="form-control"
+                id="hoTenPhuHuynh"
+                placeholder="Nhập họ tên"
+              />
+              <label class="error-message" id="n1Error"
+                >Bạn hãy nhập ngày sinh</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="soDienThoaiPhuHuynh"
+                >SĐT phụ huynh/người bảo trợ</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="soDienThoaiPhuHuynh"
+                placeholder="Nhập số điện thoại"
+              />
+              <label class="error-message" id="n2Error"
+                >Bạn hãy nhập ngày sinh</label
+              >
+            </div>
+          </div>
+        </div>
+        <h3 class="title-section">
+          THÔNG TIN ĐĂNG KÝ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC
+        </h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="coSoNhapHoc">Cơ sở nhập học</label>
+              <select class="form-control" id="coSoNhapHoc">
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">Hồ Chí Minh</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="nguyenVong1ChuyenNganh">Nguyện vọng thứ nhất</label>
+            <div class="form-group">
+              <select class="form-control" id="chuyenNganh">
+                <option value="">Chuyên ngành</option>
+              </select>
+              <label class="error-message" id="chuyenNganh1"
+                >Hãy chọn chuyên ngành thứ nhất</label
+              >
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="nguyenVong1Nganh">&nbsp;</label>
+              <select class="form-control" id="nguyenVong1Nganh">
+                <option value="">Ngành</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="nguyenVong2ChuyenNganh">Nguyện vọng thứ hai</label>
+            <div class="form-group">
+              <select class="form-control" id="nguyenVong2ChuyenNganh">
+                <option value="">Chuyên ngành</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="nguyenVong2Nganh">&nbsp;</label>
+              <select class="form-control" id="nguyenVong2Nganh">
+                <option value="">Ngành</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="namTotNghiep"
+                >Năm tốt nghiệp THPT hoặc tương đương</label
+              >
+              <select class="form-control" id="namTotNghiep">
+                <option value="">2024</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="truongTotNghiep"
+                >Trường tốt nghiệp THPT hoặc tương đương</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="truongTotNghiep"
+                placeholder="Trường"
+              />
+              <label class="error-message" id="ttnError"
+                >Hãy nhập trường tốt nghiệp THPT hoặc tương đương</label
+              >
+            </div>
+          </div>
+        </div>
+        <label for="noiTotNghiep">Nơi tốt nghiệp</label>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group">
+              <select class="form-control" id="nt1">
+                <option value="">Chọn tỉnh/thành phố</option>
+              </select>
+              <label class="error-message" id="nt11"
+                >Hãy chọn tỉnh/thành phố</label
+              >
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <select class="form-control" id="nt2">
+                <option value="">Quận/Huyện</option>
+              </select>
+              <label class="error-message" id="nt22">Hãy chọn quận/huyện</label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+              <select class="form-control" id="nt3">
+                <option value="">Phường/Xã/Thị Trấn</option>
+              </select>
+              <label class="error-message" id="nt33"
+                >Hãy chọn xã/phường/thị trấn</label
+              >
+            </div>
+          </div>
+        </div>
+        <h3 class="title-section">THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nguoinhan">Người nhận</label>
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="thiSinhCheckbox"
+              />
+              <label class="form-check-label" for="thiSinhCheckbox"
+                >Thí sinh</label
+              >
+            </div>
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="phuHuynhCheckbox"
+              />
+              <label class="form-check-label" for="phuHuynhCheckbox"
+                >Phụ huynh/Người bảo trợ</label
+              >
+            </div>
+            <label class="error-message" id="all1"
+              >Hãy chọn người nhận giấy báo kết quả xét tuyển</label
+            >
+          </div>
+          <div class="col-md-6">
+            <label for="nguoinhan">Địa chỉ nhận</label>
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="diaChiThuongTruCheckbox"
+              />
+              <label class="form-check-label" for="diaChiThuongTruCheckbox"
+                >Địa chỉ thường trú</label
+              >
+            </div>
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="khacCheckbox"
+              />
+              <label class="form-check-label" for="khacCheckbox">Khác</label>
+            </div>
+            <label class="error-message" id="all2"
+              >Hãy chọn địa chỉ nhận giấy báo kết quả xét tuyển</label
+            >
+          </div>
+        </div>
+        <h3 class="title-section">
+          TẢI LÊN GIẤY TỜ XÁC THỰC HỒ SƠ ĐĂNG KÝ HỌC
+        </h3>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="anhMatTruoc">Ảnh CMND/CCCD mặt trước</label>
+            <small class="form-text dim-text">(bắt buộc)</small>
+            <img
+              class="img-fluid limited-height-img"
+              src="https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/cccd-mt.png"
+              alt=""
+            />
+            <input
+              type="file"
+              class="form-control-file mt-2"
+              id="anhMatTruoc"
+              accept="image/*"
+            />
+            <label class="error-message" id="img1"
+              >Hãy chọn tỉnh/thành phố</label
+            >
+          </div>
+          <div class="col-md-3">
+            <label for="anhMatSau">Ảnh CMND/CCCD mặt sau</label>
+            <small class="form-text dim-text">(bắt buộc)</small>
+            <img
+              class="img-fluid limited-height-img"
+              src="https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/cccd-ms.png"
+              alt=""
+            />
+            <input
+              type="file"
+              class="form-control-file mt-2"
+              id="anhMatSau"
+              accept="image/*"
+            />
+            <label class="error-message" id="img2"
+              >Hãy chọn tỉnh/thành phố</label
+            >
+          </div>
+          <div class="col-md-6">
+            <label for="anhBangTotNghiep"
+              >Bản sao công chứng Bằng tốt nghiệp THPT</label
+            >
+            <small class="form-text dim-text"
+              >Hoặc giấy chứng nhận tốt nghiệp tạm thời (không bắt buộc)</small
+            >
+            <img
+              class="img-fluid limited-height-img"
+              src="https://caodang.fpt.edu.vn/wp-content/themes/fpoly/assets-custom/images/bang-tot-nghiep-thpt.png"
+              alt=""
+            />
+            <input
+              type="file"
+              class="form-control-file mt-2"
+              id="anhBangTotNghiep"
+              accept="image/*"
+            />
+          </div>
+        </div>
+        <div class="row" style="margin-top: 20px">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="diaChiThuongTruCheckbox1"
+              />
+              <label class="form-check-label" for="diaChiThuongTruCheckbox"
+                >Tôi xin cam đoan những lời khai của tôi trên phiếu đăng ký này
+                là đúng sự thật. Nếu sai tôi hoàn toàn chịu trách nhiệm và nhận
+                xử lý theo Quy chế tuyển sinh cao đẳng hiện hành</label
+              >
+            </div>
+            <label class="error-message" id="box1"
+              >Bạn chưa đồng ý với cam kết xác nhận thông tin</label
+            >
+            <div class="form-group">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="khacCheckbox2"
+              />
+              <label class="form-check-label" for="khacCheckbox"
+                >Tôi đã đọc kỹ và cam kết tuân thủ Quy định tài chính của nhà
+                trường</label
+              >
+            </div>
+            <label class="error-message" id="box2"
+              >Bạn chưa đồng ý với cam kết tài chính</label
+            >
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">
+            GỬI HỒ SƠ ĐĂNG KÝ
+          </button>
+        </div>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          var hoTenInput = document.getElementById("hoTen");
+          var hterrorSpan = document.getElementById("hoTenError");
+          var nsInput = document.getElementById("ngaySinh");
+          var nserrorSpan = document.getElementById("nsError");
+          var dtInput = document.getElementById("danToc");
+          var dterrorSpan = document.getElementById("dtError");
+
+          var cccdInput = document.getElementById("soCCCD");
+          var cccderrorSpan = document.getElementById("cccdError");
+
+          var ncInput = document.getElementById("ngayCap");
+          var ncerrorSpan = document.getElementById("ngaycError");
+
+          var nc2Input = document.getElementById("noiCap");
+          var nc2errorSpan = document.getElementById("noicError");
+          var sdtInput = document.getElementById("soDienThoai");
+          var sdterrorSpan = document.getElementById("sdtError");
+          var n1Input = document.getElementById("hoTenPhuHuynh");
+          var n1errorSpan = document.getElementById("n1Error");
+          var n2Input = document.getElementById("soDienThoaiPhuHuynh");
+          var n2errorSpan = document.getElementById("n2Error");
+          var ttnInput = document.getElementById("truongTotNghiep");
+          var ttnerrorSpan = document.getElementById("ttnError");
+          var snInput = document.getElementById("soNhaDuong");
+          var snerrorSpan = document.getElementById("snError");
+
+          var ttpInput = document.getElementById("tinhThanhPho");
+          var ttperrorSpan = document.getElementById("tinhThanhPho1");
+          var xppInput = document.getElementById("xaPhuong");
+          var xpperrorSpan = document.getElementById("xaPhuong1");
+          var qhpInput = document.getElementById("quanHuyen");
+          var qhperrorSpan = document.getElementById("quanHuyen1");
+
+          var cn1Input = document.getElementById("chuyenNganh");
+          var cn1errorSpan = document.getElementById("chuyenNganh1");
+          var nt1Input = document.getElementById("nt1");
+          var nt1errorSpan = document.getElementById("nt11");
+          var nt2Input = document.getElementById("nt2");
+          var nt2errorSpan = document.getElementById("nt22");
+          var nt3Input = document.getElementById("nt3");
+          var nt3errorSpan = document.getElementById("nt33");
+
+          var box1Input = document.getElementById("diaChiThuongTruCheckbox1");
+          var box1errorSpan = document.getElementById("box1");
+          var box2Input = document.getElementById("khacCheckbox2");
+          var box2errorSpan = document.getElementById("box2");
+
+          var all1Input = document.getElementById("thiSinhCheckbox");
+          var all11Input = document.getElementById("phuHuynhCheckbox");
+          var all1errorSpan = document.getElementById("all1");
+          var all2Input = document.getElementById("diaChiThuongTruCheckbox");
+          var all22Input = document.getElementById("khacCheckbox");
+          var all2errorSpan = document.getElementById("all2");
+
+          var img1Input = document.getElementById("anhMatTruoc");
+          var img1errorSpan = document.getElementById("img1");
+          var img2Input = document.getElementById("anhMatSau");
+          var img2errorSpan = document.getElementById("img2");
+
+          if (!hoTenInput.value.trim()) {
+            hterrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!nsInput.value.trim()) {
+            nserrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!dtInput.value.trim()) {
+            dterrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!cccdInput.value.trim()) {
+            cccderrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!ncInput.value.trim()) {
+            ncerrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!nc2Input.value.trim()) {
+            nc2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!sdtInput.value.trim()) {
+            sdterrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!n1Input.value.trim()) {
+            n1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!n2Input.value.trim()) {
+            n2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!ttnInput.value.trim()) {
+            ttnerrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!snInput.value.trim()) {
+            snerrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (ttpInput.value === "") {
+            ttperrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (xppInput.value === "") {
+            xpperrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (qhpInput.value === "") {
+            qhperrorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (cn1Input.value === "") {
+            cn1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (nt1Input.value === "") {
+            nt1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (nt2Input.value === "") {
+            nt2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (nt3Input.value === "") {
+            nt3errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!box1Input.checked) {
+            box1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!box2Input.checked) {
+            box2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!all1Input.checked && !all11Input.checked) {
+            all1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (!all2Input.checked && !all22Input.checked) {
+            all2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (
+            img1Input.files.length === 0 ||
+            !isValidImageType(img1Input.files[0])
+          ) {
+            img1errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+          if (
+            img2Input.files.length === 0 ||
+            !isValidImageType(img2Input.files[0])
+          ) {
+            img2errorSpan.style.display = "block";
+            event.preventDefault();
+          }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
